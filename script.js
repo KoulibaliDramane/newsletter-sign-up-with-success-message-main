@@ -24,7 +24,10 @@ let dismiss = document.getElementById('dismiss');
 let emailMessage = document.getElementById('emailMessage');
 
 dismiss.addEventListener('click', function (){
-    container.style.display = 'block';
-    container.style.display = 'flex';
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        container.style.display = 'block';
+    } else {
+        container.style.display = "flex";
+    }
     thanksPage.style.display = 'none';
 })
